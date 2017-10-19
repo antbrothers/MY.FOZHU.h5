@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/10/18.
  */
 var webpack = require("webpack")
+var htmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     devtool: "source-map",
     entry: {
@@ -10,7 +11,7 @@ module.exports = {
     output: {
         path: __dirname + "/dist",
         filename: "[name].bundle.js",
-        publicPath: "/dist"
+        publicPath: ""
     },
     devServer: {
         inline: true,
@@ -59,7 +60,7 @@ module.exports = {
                 options: {
                     name: 'fonts/[name].[ext]?[hash]' //目标文件夹
                 }
-            }, //添加对字体文件的支持。
+            },
 
             {
                 test: /\.(png|jpg|gif|svg)$/,
@@ -67,8 +68,6 @@ module.exports = {
                 options: {
                     name: 'img/[name].[ext]'
                 }
-                //(1)将代码中依赖的图片资源复制到目标文件夹img/文件夹下面
-                //(2)自动更新静态url地址(根据publicPath)。
             }
 
         ]
@@ -82,5 +81,10 @@ module.exports = {
         //     warnings: false
         //   }
         // })
+        new htmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html',
+            inject: true
+        })
     ]
 }
