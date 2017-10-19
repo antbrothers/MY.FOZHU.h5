@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import './index.scss'
 import ReactSwipe from 'react-swipe'
 import axios from 'axios'
+
 class App extends Component {
     constructor(props) {
         super(props)
@@ -13,20 +14,35 @@ class App extends Component {
             playinglist: []
         }
     }
+
     componentWillMount() {
         console.log(this.state.datalist.length)
+        this._isMounted = true
         axios.get("/v4/api/billboard/home").then(res => {
-            this.setState({
-                datalist: res.data.data.billboards
-            })
+            this.handlehomeResponse(res)
         })
         axios.get("/v4/api/film/now-playing").then(res=>{
-            this.setState({
-                playinglist: res.data.data.films
-            })
+             this.handleplayingResponse(res)
         })
     }
+    handlehomeResponse(response) {
+    if (!this._isMounted) return;
+        this.setState({
+            datalist: response.data.data.billboards
+        })
+    }
+    handleplayingResponse(response) {
+        if (!this._isMounted) return;
+        this.setState({
+            playinglist: response.data.data.films
+        })
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false
+    }
     render() {
+        var Banner =require('../../img/banner6.jpg')
         return (
             <div className="home">
                 <ReactSwipe className="carousel" swipeOptions={{continuous: true, auto: 3000}} key={this.state.datalist.length}>
@@ -38,6 +54,9 @@ class App extends Component {
                         )
                     }
                 </ReactSwipe>
+                <div>
+                  <img src={Banner} />
+                </div>
                 <ul className="homeplayinglist">
                     {
                         this.state.playinglist.map((item, index) =>
