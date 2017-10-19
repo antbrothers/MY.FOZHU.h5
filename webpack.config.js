@@ -3,6 +3,8 @@
  */
 var webpack = require("webpack")
 var htmlWebpackPlugin = require('html-webpack-plugin')
+var precss = require('precss')
+var autoprefixer = require('autoprefixer')
 module.exports = {
     devtool: "source-map",
     entry: {
@@ -85,6 +87,39 @@ module.exports = {
             filename: 'index.html',
             template: 'index.html',
             inject: true
+        }),
+        new webpack.LoaderOptionsPlugin({
+            // postcss: [
+            //     require('autoprefixer')({
+            //         browsers: ["Android >= 4", "iOS >= 6"]
+            //     }),
+            //     require('postcss-px2rem')({
+            //         baseDpr: 2,
+            //         threeVersion: false,
+            //         remVersion: true,
+            //         remUnit: 75,
+            //         remPrecision: 6,
+            //         forcePxComment:'!px',
+            //         keepComment:'!no'
+            //     })
+            // ]
+            options: {
+                postcss: [
+                    autoprefixer({
+                        browsers: ["Android >= 4", "iOS >= 6"]
+                    }),
+                    require('postcss-px2rem')({
+                            baseDpr: 2,
+                            threeVersion: false,
+                            remVersion: true,
+                            remUnit: 75,
+                            remPrecision: 6,
+                            forcePxComment:'!px',
+                            keepComment:'!no'
+                        })
+                ]
+            }
+
         })
     ]
 }

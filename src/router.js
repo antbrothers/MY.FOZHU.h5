@@ -10,13 +10,15 @@ import {
     Switch
 } from 'react-router-dom'
 
+import test from './component/test/index'
 import Home from './component/home/index'
 
 const router = (
     <Router>
         <Switch>
+            <Route path="/test" component={test}/>
             <Route path="/home" component={Home}/>
-            <Redirect from="/" to="/home"/> {/*重定向*/}
+            <Redirect from="/" to="/test"/> {/*重定向*/}
         </Switch>
     </Router>
 )

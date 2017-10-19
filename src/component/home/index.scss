@@ -15,12 +15,16 @@
     h3{
       font-size: 12px;
       line-height: 15px;
+      display: flex;
     }
 
     p{
       font-size: 8px;
       color: #9a9a9a;
       line-height: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     &:active{
 
