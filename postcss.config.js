@@ -1,8 +1,14 @@
-/**
- * Created by Administrator on 2017/10/19.
- */
 module.exports = {
-    plugins: [
-        require('autoprefixer')
-    ]
+   plugins: [
+       require('postcss-px2rem')({
+           baseDpr: 2,
+           threeVersion: false,
+           remVersion: true,
+           remUnit: 75,
+           remPrecision: 6,
+           forcePxComment:'px',
+           keepComment:'no'
+       }),
+       require('postcss-cssnext')
+   ]
 }
