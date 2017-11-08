@@ -12,8 +12,7 @@ commonConfig = {
             path.join(__dirname, 'src/index.js')
         ],
         vendor: ['react', 'react-router-dom', 'redux', 'react-dom', 'react-redux'],
-        'flex':'./static/js/flex.js',
-        'mui':'./static/js/mui.js'
+        'flex':'./static/js/flex.js'
     },
     output: {
         path: path.join(__dirname, './dist'),
