@@ -1,13 +1,14 @@
 module.exports = {
    plugins: [
-       require('postcss-px2rem')({
+       require('postcss-px2rem-exclude')({
            baseDpr: 2,
            threeVersion: false,
            remVersion: true,
            remUnit: 75,
            remPrecision: 6,
-           forcePxComment:'px',
-           keepComment:'no'
+           forcePxComment:'!px',
+           keepComment:'!no',
+           exclude: /node_modules/
        }),
        require('postcss-cssnext')
    ]

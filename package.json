@@ -36,9 +36,11 @@
     "webpack-merge": "^4.1.0"
   },
   "dependencies": {
+    "antd": "^2.13.9",
     "axios": "^0.16.2",
     "node-sass": "^4.5.3",
     "postcss-px2rem": "^0.3.0",
+    "postcss-px2rem-exclude": "^0.0.5",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
