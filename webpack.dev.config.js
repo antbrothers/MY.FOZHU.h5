@@ -24,11 +24,40 @@ const devConfig = {
       {
         test: /\.scss$/,
         // use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
-        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!sass-loader!postcss-loader?sourceMap=true'
+        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!sass-loader!postcss-loader'
+/*        use:[
+          require.resolve('style-loader'),
+          {
+            loader: require.resolve('css-loader'),
+            options: {
+              importLoaders: 1,
+              modules: true,
+              localIdentName: '[name]__[local]'
+            }
+          },
+          {
+            loader: require.resolve('postcss-loader'),
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                require('postcss-flexbugs-fixes'),
+                require('autoprefixer')({
+                  browsers: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9', // React doesn't support IE8 anyway
+                  ],
+                  flexbox: 'no-2009',
+                })
+              ]
+            }
+          }
+        ]*/
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!less-loader!postcss-loader?sourceMap=true'
+        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!less-loader!postcss-loader'
         // use: ["style-loader", "css-loader", "less-loader", "postcss-loader",],
       }
 

@@ -5,7 +5,6 @@ import {getUserInfo} from "actions/userInfo";
 import './Scss/UserInfo.scss'
 
 class UserInfo extends Component {
-
   render() {
     const {userInfo, isLoading, errorMsg} = this.props.userInfo;
     return (
@@ -16,7 +15,9 @@ class UserInfo extends Component {
               errorMsg ? errorMsg :
                 <div>
                   <p>用户信息：</p>
+
                   <p>用户名：{userInfo.name}</p>
+
                   <p className="intro">介绍：{userInfo.intro}</p>
                 </div>
             )
@@ -26,5 +27,4 @@ class UserInfo extends Component {
     )
   }
 }
-
 export default connect((state) => ({userInfo: state.userInfo}), {getUserInfo})(UserInfo);

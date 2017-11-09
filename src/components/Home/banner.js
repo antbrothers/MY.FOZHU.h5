@@ -61,11 +61,11 @@ export default class Banner extends React.Component {
         <div className={style.bannerNav}>
           <div className={style.navComm}>
             <div className={style.navTitle}>有报专区</div>
-            <div className={style.navTitle}>24小时自助兑换</div>
+            <div className={style.navDesc}>24小时自助兑换</div>
           </div>
           <div className={style.navComm}>
             <div className={style.navTitle}>看购电影票</div>
-            <div className={style.navTitle}>各种优惠等你来</div>
+            <div className={style.navDesc}>各种优惠等你来</div>
           </div>
         </div>
       </div>

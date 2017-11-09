@@ -44,6 +44,7 @@
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
+    "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-px2rem": "^0.3.0",
     "postcss-px2rem-exclude": "^0.0.5",
     "react": "^15.6.1",
