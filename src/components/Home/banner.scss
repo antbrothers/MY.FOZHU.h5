@@ -1,0 +1,29 @@
+.wrapper {
+  width: 750px;
+  height: 369px;
+  background-color: antiquewhite;
+}
+.bannerNav {
+  display: flex;
+  align-items: center;
+  width: 750px;
+  height: 148px;
+  border-bottom: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
+  border-top: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
+}
+.navComm {
+  flex: 1;
+  padding-left: 50px;
+}
+.navComm:first-child {
+  border-right: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
+}
+.navTitle {
+  font-size: 30px; /*!px*/
+  color: #333;
+  font-weight: normal;
+}
+.navDesc {
+  font-size: 26px; /*!px*/
+  color: #999999;
+}
