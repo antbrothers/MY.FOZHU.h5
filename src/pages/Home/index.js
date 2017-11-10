@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
  import Banner from '../../components/Home/banner'
 import GoldSeed from '../../components/Home/goldSeed'
+import Recomment from '../../components/Home/recommend'
 import './Scss/index.scss'
 
 class HomeIndex extends Component {
@@ -9,6 +10,7 @@ class HomeIndex extends Component {
       <div className="containner">
         <Banner/>
         <GoldSeed/>
+        <Recomment/>
       </div>
     )
   }

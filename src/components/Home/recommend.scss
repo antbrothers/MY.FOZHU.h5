@@ -1,5 +1,5 @@
-.goldSeed {
-  width: 750px;
+.main {
+
 }
 .title {
   width: 100%;
@@ -27,37 +27,17 @@
   flex-direction: row-reverse;
   margin-right: 50px;
 }
-.shop {
+.list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
-.rshop {
-  width: 375px;
-  height: 416px;
+.produce {
+  width: 250px;
+  height: 250px;
 }
-.lshop {
-  flex: 1;
-  height: 416px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-.lshoptop {
-  display: flex;
-  flex-direction: column;
-  border-bottom: 0.5px solid rgba(207, 207, 207, 0.95); /*!no*/
-  border-left: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
-}
-.imgcomm {
+.produceimg {
   width: 100%;
-}
-.bottomshop {
-  width: 750px;
-  height: 210px;
-  overflow: hidden;
-  border-top: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
-  border-bottom: 1px solid rgba(207, 207, 207, 0.95); /*!no*/
+  height: 100%;
 }
 .banner {
   width: 100%;

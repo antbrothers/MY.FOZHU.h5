@@ -34,6 +34,10 @@ export default class GoldSeed extends Component {
         <div className={style.bottomshop}>
           <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner4.jpg" className={style.imgcomm}/>
         </div>
+        <div className={style.line}></div>
+        <div className={style.banner}>
+          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/ba2.jpg" className={style.bannerimg} />
+        </div>
       </div>
     )
   }

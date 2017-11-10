@@ -66,7 +66,8 @@ const devConfig = {
   devServer: {
     contentBase: path.join(__dirname, './dist'),
     historyApiFallback: true,
-    host: '0.0.0.0',
+    host: '192.168.31.174',
+    port: '8084',
     proxy: {
       '/familyweb/api/LiveStatistic/GetFamilyDetail': {
         target: 'http://langke-qas.lvb.eastmoney.com/',
