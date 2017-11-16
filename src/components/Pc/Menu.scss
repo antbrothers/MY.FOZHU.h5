@@ -17,5 +17,12 @@
   margin: 16px;
 }
 .main {
-  height: 1050px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.menu {
+  background-color: #404040;
 }

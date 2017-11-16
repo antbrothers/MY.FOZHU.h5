@@ -9,7 +9,7 @@ import Loading from 'components/Loading/Loading';
 import UserInfo from 'bundle-loader?lazy&name=userInfo!pages/UserInfo/UserInfo';
 import test from 'bundle-loader?lazy&name=test!pages/Test/test'
 import home from 'bundle-loader?lazy&name=homeIndex!pages/Home/index'
-import Menu from 'bundle-loader?lazy&name=menu!components/Pc/Menu'
+import pcLayout from 'bundle-loader?lazy&name=menu!components/Pc/Menu'
 
 const createComponent = (component) => () => (
   <Bundle load={component}>
@@ -26,7 +26,7 @@ export default () => (
       <Route path="/test" component={createComponent(test)}/>
       <Route path="/home" component = {createComponent(home)}/>
 
-      <Route path="/pc" component={createComponent(Menu)}/>
+      <Route path="/pc" component={createComponent(pcLayout)}></Route>
     </Switch>
   </div>
 );
