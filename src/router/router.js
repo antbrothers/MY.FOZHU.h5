@@ -25,8 +25,13 @@ export default () => (
       <Route exact path="/" component={createComponent(UserInfo)}/>
       <Route path="/test" component={createComponent(test)}/>
       <Route path="/home" component = {createComponent(home)}/>
-
-      <Route path="/pc" component={createComponent(pcLayout)}></Route>
+      <Route path="/pc" render={() =>
+        <pcLayout>
+          <Switch>
+            <Route path="/pc/index" ></Route>
+          </Switch>
+        </pcLayout>
+      }></Route>
     </Switch>
   </div>
 );
