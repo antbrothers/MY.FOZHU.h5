@@ -33,10 +33,10 @@ export default class MyMenu extends Component {
             <Menu mode="inline" theme="dark">
               <SubMenu key="user" title={<span><Icon type="user"/><span>用户管理</span></span>}>
                 <MenuItem key="user-list">
-                  <Link to="/user/list">用户列表</Link>
+                  <Link to="/pc/use/list">用户列表</Link>
                 </MenuItem>
                 <MenuItem key="user-add">
-                  <Link to="/user/add">添加用户</Link>
+                  <Link to="/pc/use/add">添加用户</Link>
                 </MenuItem>
               </SubMenu>
 
@@ -60,7 +60,7 @@ export default class MyMenu extends Component {
             />
           </Header>
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-            {this.props.children}
+             {this.props.children}
           </Content>
         </Layout>
       </Layout>

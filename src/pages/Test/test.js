@@ -5,7 +5,7 @@ import Form from 'antd/lib/form'
 import Icon from 'antd/lib/icon'
 import Button from 'antd/lib/button'
 import Input from 'antd/lib/input'
-import 'antd/dist/antd.css'
+
 
 const FormItem = Form.Item
 
