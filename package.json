@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "antd": "^2.13.9",
+    "antd-mobile": "^2.0.3",
     "axios": "^0.16.2",
     "better-scroll": "^1.4.1",
     "less": "^2.7.3",

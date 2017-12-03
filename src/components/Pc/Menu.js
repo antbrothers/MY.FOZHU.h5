@@ -5,7 +5,6 @@ const { Header, Sider, Content } = Layout
 const SubMenu = Menu.SubMenu
 const MenuItem = Menu.Item
 
-import index from '../../pages/Pc/Index'
 import style from './Menu.scss'
 import 'antd/dist/antd.css'
 export default class MyMenu extends Component {
@@ -20,29 +19,31 @@ export default class MyMenu extends Component {
       collasped: !this.state.collasped
     })
   }
+  componentWillMount() {
+  }
   render() {
     return (
-      <Layout className={style.main}>
+      <Layout className={`${style.main} ${style.container}`}>
         <Sider
           trigger={null}
           collapsible
           collapsed={this.state.collasped}
         >
           <div className={style.logo} />
-          <div className={style.menu}>
-            <Menu mode="inline" theme="dark">
-              <SubMenu key="user" title={<span><Icon type="user"/><span>用户管理</span></span>}>
-                <MenuItem key="user-list">
+          <div className={`${style.menu} ${style.defaultcolor}`}>
+            <Menu mode="inline" className={style.defaultcolor} theme="dark">
+              <SubMenu key="user" className={style.defaultcolor} title={<span><Icon type="user"/><span>用户管理</span></span>}>
+                <MenuItem key="user-list" className={style.defaultcolor}>
                   <Link to="/pc/use/list">用户列表</Link>
                 </MenuItem>
-                <MenuItem key="user-add">
+                <MenuItem key="user-add" className={style.defaultcolor}>
                   <Link to="/pc/use/add">添加用户</Link>
                 </MenuItem>
               </SubMenu>
 
-              <SubMenu key="book" title={<span><Icon type="book"/><span>图书管理</span></span>}>
+              <SubMenu key="book" title={<span><Icon type="book"/><span>内容管理</span></span>}>
                 <MenuItem key="book-list">
-                  <Link to="/book/list">图书列表</Link>
+                  <Link to="/book/list">home页面管理</Link>
                 </MenuItem>
                 <MenuItem key="book-add">
                   <Link to="/pc/test">test</Link>

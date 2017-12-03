@@ -1,6 +1,7 @@
 import React from 'react'
-import BScroll from 'better-scroll'
 import style from './banner.scss'
+import {Carousel, WhiteSpace, WingBlank} from 'antd-mobile'
+
 export default class Banner extends React.Component {
   constructor(props) {
     super(props)
@@ -34,17 +35,10 @@ export default class Banner extends React.Component {
       ]
     }
   }
-  componentDidMount (){
-    let wrapper = document.querySelector('.' + style.wrapper)
-    let scroll = new BScroll(wrapper, {
-      startX: 0,
-      startY: 0
-    })
-  }
   render() {
     return (
       <div>
-        <div className={style.wrapper}>
+        {/*<div className={style.wrapper}>
           <div>
             {
               this.state.items.map(function (item) {
@@ -57,7 +51,35 @@ export default class Banner extends React.Component {
               <image></image>
             </div>
           </div>
-        </div>
+        </div>*/}
+        <WingBlank className={style.wrapper}>
+          <Carousel
+            autoplay={true}
+            infinite
+            selectedIndex={1}
+            beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+            afterChange={index => console.log('slide to', index)}
+          >
+            {
+              this.state.items.map(function (item) {
+                return <a key={item.id}
+                          style={{ display: 'inline-block', width: '100%', height: '300px'}}
+                          href="http://aplipay.com"
+                >
+                  <img src={item.picUrl}
+                         alt=""
+                         style={{ width: '100%', verticalAlign: 'top' }}
+                         onLoad={() => {
+                           // fire window resize event to change height
+                           window.dispatchEvent(new Event('resize'));
+                           // this.setState({ imgHeight: 'auto' });
+                         }}>
+                  </img>
+                </a>
+              })
+            }
+          </Carousel>
+        </WingBlank>
         <div className={style.bannerNav}>
           <div className={style.navComm}>
             <div className={style.navTitle}>有报专区</div>
