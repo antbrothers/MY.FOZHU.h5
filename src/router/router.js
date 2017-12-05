@@ -11,6 +11,7 @@ import test from 'bundle-loader?lazy&name=test!pages/Test/test'
 import home from 'bundle-loader?lazy&name=homeIndex!pages/Home/index'
 import PcLayout from '../components/Pc/Menu'
 import useList from 'bundle-loader?lazy&name=useList!components/Pc/UseManage/list'
+import PcProductManageIndex from 'bundle-loader?lazy&name=productmanageindex!components/Pc/ProductManage/index'
 
 // 按需加载 组件
 const createComponent = (component) => () => (
@@ -32,6 +33,7 @@ export default () => (
           <Switch>
             <Route path="/pc/use/add" component={createComponent(test)}/>
             <Route path="/pc/use/list" component={createComponent(useList)}/>
+            <Route path="/pc/pruductmanage/index" component={createComponent(PcProductManageIndex)}/>
             <Redirect from="/pc" to="/pc/use/add"/>
           </Switch>
         </PcLayout>

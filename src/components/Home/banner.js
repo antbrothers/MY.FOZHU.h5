@@ -91,7 +91,6 @@ export default class Banner extends React.Component {
           </div>
         </div>
       </div>
-
     )
   }
 }

@@ -43,7 +43,7 @@ export default class MyMenu extends Component {
 
               <SubMenu key="book" title={<span><Icon type="book"/><span>内容管理</span></span>}>
                 <MenuItem key="book-list">
-                  <Link to="/book/list">home页面管理</Link>
+                  <Link to="/pc/pruductmanage/index">home页面管理</Link>
                 </MenuItem>
                 <MenuItem key="book-add">
                   <Link to="/pc/test">test</Link>
