@@ -23,13 +23,15 @@ export default class MyMenu extends Component {
   }
   render() {
     return (
-      <Layout className={`${style.main} ${style.container}`}>
+      <Layout className='container main'>
         <Sider
           trigger={null}
           collapsible
           collapsed={this.state.collasped}
         >
-          <div className={style.logo} />
+          <div className='logo'>
+            <img src={require('../../../static/image/logo.png')} className='logoicon'/>
+          </div>
           <div className={`${style.menu} ${style.defaultcolor}`}>
             <Menu mode="inline" className={style.defaultcolor} theme="dark">
               <SubMenu key="user" className={style.defaultcolor} title={<span><Icon type="user"/><span>用户管理</span></span>}>
@@ -53,12 +55,75 @@ export default class MyMenu extends Component {
           </div>
         </Sider>
         <Layout>
-          <Header style={{ background: '#fff', padding: 0 }}>
+          <Header style={{ background: '#fff', padding: 0 }} className='nav-header'>
             <Icon
-              className={style.trigger}
+              className='trigger'
               type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
               onClick={this.toggle}
             />
+            <ul className="navigation bordered">
+              <li>
+                <a href="index-2.html" className="button">
+                  <div className="icon">
+                    <Icon type="desktop" />
+                  </div>
+                  <div className="name">Dashboard</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button yellow">
+                  <div className="arrow"></div>
+                  <div className="icon">
+                    <Icon type="setting" />
+                  </div>
+                  <div className="name">UI Elements</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button green">
+                  <div className="arrow"></div>
+                  <div className="icon">
+                    <Icon type="edit" />
+                  </div>
+                  <div className="name">Forms Stuff</div>
+                </a>
+              </li>
+              <li>
+                <a href="statistic.html" className="button red">
+                  <div className="icon">
+                    <Icon type="area-chart" />
+                  </div>
+                  <div className="name">Statistic</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button dblue">
+                  <div className="arrow"></div>
+                  <div className="icon">
+                    <Icon type="database" />
+                  </div>
+                  <div className="name">Tables</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button purple">
+                  <div className="arrow"></div>
+                  <div className="icon">
+                    <Icon type="inbox" />
+                  </div>
+                  <div className="name">Samples</div>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="button orange">
+                  <div className="arrow"></div>
+                  <div className="icon">
+                    <Icon type="cloud-o" />
+                  </div>
+                  <div className="name">Other</div>
+                </a>
+              </li>
+            </ul>
           </Header>
           <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
              {this.props.children}

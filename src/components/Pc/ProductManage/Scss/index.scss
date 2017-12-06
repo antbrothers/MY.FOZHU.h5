@@ -1,3 +1,119 @@
-.pruductmanage{
-
+.page-header {
+  padding: 0px 0px 10px;
+  margin: 0px 0px 20px;
+  border-bottom: 1px solid #e0e0e0;
+  width: 100%;
+  float: left;
+}
+.page-header .icon {
+  float: left;
+  margin-right: 10px;
+  width: 52px;
+  height: 52px;
+  border: 6px solid #999;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #999999;
+}
+.page-header h1 {
+  font-size: 32px;
+  color: #4C4C4C;
+  font-weight: normal;
+  display: block;
+  float: left;
+  line-height: 35px;
+  padding: 0px;
+  margin: 0px;
+}
+.page-header h1 small {
+  font-size: 11px;
+  color: #666;
+  display: block;
+  line-height: 20px;
+}
+.widgets {
+  text-align: center;
+  position: relative;
+  height: 205px;
+}
+.widget {
+  padding: 10px;
+  height: 180px;
+  width: 380px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  display: inline-block;
+}
+.blue {
+  background: #009AD7 !important;
+}
+.widget.value .left {
+  width: 55%;
+  font-size: 80px;
+  line-height: 75px;
+  text-align: left;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+}
+.widget.value .right {
+  width: 45%;
+  font-size: 16px;
+  text-align: left;
+  line-height: 23px;
+}
+.widget .bottom {
+  width: 100%;
+  line-height: 16px;
+  margin-top: 4px;
+  float: left;
+  text-align: left;
+}.widget .bottom a {
+   color: white;
+ }
+.widget .left, .widget .right {
+  height: 120px;
+  width: 50%;
+  float: left;
+  color: #fff;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.widget .bottom {
+  width: 100%;
+  line-height: 16px;
+  margin-top: 4px;
+  float: left;
+  text-align: left;
+}
+.clearfoat {
+  clear: both;
+}
+.right-icon {
+  float: right;
+  color: white;
+  font-size: 18px;
+}
+.green {
+  background: #68AF27 !important;
+}
+.download-icon {
+  font-size: 100px;
+}
+.widget.green .left {
+  width: 45%;
+}
+.widget.green .right {
+  width: 55%;
+}
+.orange {
+  background: #D53F26 !important;
+}
+.chart-view {
+  font-size: 100px;
 }

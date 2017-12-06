@@ -12,9 +12,10 @@
 
 .logo {
   height: 32px;
-  background: #333;
-  border-radius: 6px;
-  margin: 16px;
+  margin-top: 50px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 20px;
 }
 .main {
   position: absolute;
@@ -23,12 +24,6 @@
   left: 0;
   bottom: 0;
 }
-.main.container {
-}
-.menu.defaultcolor,.defaultcolor, .menu.defaultcolor > ul, .menu.defaultcolor > ul li >ul{
-}
-.menu.defaultcolor > ul li div:hover, .menu.defaultcolor > ul li a:hover{
-}
 .constainer {
   width: 100%;
   height: 100%;
@@ -36,3 +31,100 @@
   background-size: 100% 100%;
   background-attachment: fixed;
 }
+.logoicon {
+  width: 220px;
+  height: 50px;
+}
+
+.nav-header.ant-layout-header {
+  height: 138px;
+}
+.navigation {
+  padding: 10px 0px 25px;
+  float: right;
+  margin: 0px;
+  list-style: none;
+  display: block;
+  position: relative;
+}
+
+.navigation .button {
+  width: 110px;
+  height: 110px;
+  display: block;
+  padding: 5px;
+  background: #009AD7;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.navigation .button .icon {
+  width: 44px;
+  height: 44px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  font-size: 27px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.navigation .button .name {
+  font-size: 12px;
+  color: #FFF;
+  line-height: 13px;
+}
+
+.navigation li {
+  margin-left: 3px;
+  margin-bottom: 3px;
+  display: block;
+  float: left;
+}
+li {
+  line-height: 20px;
+}
+.yellow {
+  background: #FFAA31 !important;
+}
+a {
+  outline: none !important;
+}
+.navigation .sub {
+  display: none;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.ico-cog-2:before {
+  content: "\e20d";
+}
+.green {
+  background: #68AF27 !important;
+}
+.red {
+  background: #C22439 !important;
+}
+.dblue {
+  background: #005683 !important;
+}
+.purple {
+  background: #673499 !important;
+}
+.orange {
+  background: #D53F26 !important;
+}
+
+
+
+
+
+
+
