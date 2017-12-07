@@ -42,6 +42,7 @@
     "antd-mobile": "^2.0.3",
     "axios": "^0.16.2",
     "better-scroll": "^1.4.1",
+    "highcharts": "^6.0.3",
     "less": "^2.7.3",
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
