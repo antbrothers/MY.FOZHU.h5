@@ -129,7 +129,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <div className={Style.pruductmanage}>
+      <div className="pruductmanage">
         <div className="page-header">
           <div className="icon">
             <Icon type="arrow-right"/>

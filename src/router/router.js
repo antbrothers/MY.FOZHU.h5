@@ -12,6 +12,7 @@ import home from 'bundle-loader?lazy&name=homeIndex!pages/Home/index'
 import PcLayout from '../components/Pc/Menu'
 import useList from 'bundle-loader?lazy&name=useList!components/Pc/UseManage/list'
 import PcProductManageIndex from 'bundle-loader?lazy&name=productmanageindex!components/Pc/ProductManage/index'
+import PcProducManageHome from 'bundle-loader?lazy&name=prudectmangehome!components/Pc/ProductManage/home'
 
 // 按需加载 组件
 const createComponent = (component) => () => (
@@ -34,7 +35,8 @@ export default () => (
             <Route path="/pc/use/add" component={createComponent(test)}/>
             <Route path="/pc/use/list" component={createComponent(useList)}/>
             <Route path="/pc/pruductmanage/index" component={createComponent(PcProductManageIndex)}/>
-            <Redirect from="/pc" to="/pc/use/add"/>
+            <Route path="/pc/pruductmanage/home" component={createComponent(PcProducManageHome)}/>
+            <Redirect from="/pc" to="/pc/pruductmanage/index"/>
           </Switch>
         </PcLayout>
       }>

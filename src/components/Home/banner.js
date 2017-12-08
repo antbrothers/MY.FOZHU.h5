@@ -52,7 +52,7 @@ export default class Banner extends React.Component {
             </div>
           </div>
         </div>*/}
-        <WingBlank className={style.wrapper}>
+        <WingBlank className="banner-wrapper">
           <Carousel
             autoplay={true}
             infinite
@@ -80,14 +80,14 @@ export default class Banner extends React.Component {
             }
           </Carousel>
         </WingBlank>
-        <div className={style.bannerNav}>
-          <div className={style.navComm}>
-            <div className={style.navTitle}>有报专区</div>
-            <div className={style.navDesc}>24小时自助兑换</div>
+        <div className="bannerNav">
+          <div className="navComm">
+            <div className="navTitle">有报专区</div>
+            <div className="navDesc">24小时自助兑换</div>
           </div>
-          <div className={style.navComm}>
-            <div className={style.navTitle}>看购电影票</div>
-            <div className={style.navDesc}>各种优惠等你来</div>
+          <div className="navComm">
+            <div className="navTitle">看购电影票</div>
+            <div className="navDesc">各种优惠等你来</div>
           </div>
         </div>
       </div>

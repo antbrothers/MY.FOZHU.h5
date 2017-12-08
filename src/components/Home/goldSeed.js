@@ -8,35 +8,35 @@ export default class GoldSeed extends Component {
   }
   render() {
     return (
-      <div className={style.goldSeed}>
-        <div className={style.line}></div>
-        <div className={style.title}>
-          <div className={style.titlecomm}>
+      <div className="goldSeed">
+        <div className="line"></div>
+        <div className="title">
+          <div className="titlecomm">
             <div>金种子专区</div>
           </div>
-          <div className={`${style.titlecomm} ${style.more}`}>
+          <div className="titlecomm more">
             <div>更多</div>
           </div>
         </div>
-        <div className={style.shop}>
-          <div className={style.rshop}>
-            <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner1.jpg" className={style.imgcomm}/>
+        <div className="shop">
+          <div className="rshop">
+            <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner1.jpg" className="imgcomm"/>
           </div>
-          <div className={style.lshop}>
-            <div className={style.lshoptop}>
-              <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner2.jpg" className={style.imgcomm}/>
+          <div className="lshop">
+            <div className="lshoptop">
+              <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner2.jpg" className="imgcomm"/>
             </div>
-            <div className={style.lshoptop}>
-              <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner3.jpg" className={style.imgcomm}/>
+            <div className="lshoptop">
+              <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner3.jpg" className="imgcomm"/>
             </div>
           </div>
         </div>
-        <div className={style.bottomshop}>
-          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner4.jpg" className={style.imgcomm}/>
+        <div className="bottomshop">
+          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/banner4.jpg" className="imgcomm"/>
         </div>
-        <div className={style.line}></div>
-        <div className={style.banner}>
-          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/ba2.jpg" className={style.bannerimg} />
+        <div className="line"></div>
+        <div className="banner">
+          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/ba2.jpg" className="bannerimg" />
         </div>
       </div>
     )

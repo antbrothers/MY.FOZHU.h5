@@ -18,6 +18,11 @@ export default class MyMenu extends Component {
     this.setState({
       collasped: !this.state.collasped
     })
+    if (!this.state.collasped) {
+      document.getElementById('logody').style['transform'] = 'scale(0.4)'
+    } else {
+      document.getElementById('logody').style['transform'] = 'scale(1)'
+    }
   }
   componentWillMount() {
   }
@@ -30,7 +35,7 @@ export default class MyMenu extends Component {
           collapsed={this.state.collasped}
         >
           <div className='logo'>
-            <img src={require('../../../static/image/logo.png')} className='logoicon'/>
+            <img src={require('../../../static/image/logo.png')} className='logoicon' id="logody"/>
           </div>
           <div className={`${style.menu} ${style.defaultcolor}`}>
             <Menu mode="inline" className={style.defaultcolor} theme="dark">
@@ -46,6 +51,9 @@ export default class MyMenu extends Component {
               <SubMenu key="book" title={<span><Icon type="book"/><span>内容管理</span></span>}>
                 <MenuItem key="book-list">
                   <Link to="/pc/pruductmanage/index">home页面管理</Link>
+                </MenuItem>
+                <MenuItem key="product-index-manage">
+                  <Link to="/pc/pruductmanage/home">首页管理</Link>
                 </MenuItem>
                 <MenuItem key="book-add">
                   <Link to="/pc/test">test</Link>
@@ -125,7 +133,7 @@ export default class MyMenu extends Component {
               </li>
             </ul>
           </Header>
-          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
+          <Content style={{ margin: '24px 16px', padding: 24, background: '#fff'}}>
              {this.props.children}
           </Content>
         </Layout>

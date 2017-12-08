@@ -16,9 +16,12 @@
   margin-left: 16px;
   margin-right: 16px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .main {
-  position: relative;
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;

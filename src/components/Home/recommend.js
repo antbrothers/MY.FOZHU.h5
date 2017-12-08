@@ -7,40 +7,40 @@ export default class Recommend extends Component {
   }
   render() {
     return (
-      <div className={style.main}>
-        <div className={`header`}>
-          <div className={style.title}>
-            <div className={style.titlecomm}>
+      <div id="recoment" className="main">
+        <div className="header">
+          <div className="title">
+            <div className="titlecomm">
               <div>精品推荐专区</div>
             </div>
-            <div className={`${style.titlecomm} ${style.more}`}>
+            <div className="titlecomm more">
               <div>更多</div>
             </div>
           </div>
         </div>
-        <div className={style.list}>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd1.jpg' className={style.produceimg}/>
+        <div className="list">
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd1.jpg' className="produceimg"/>
           </div>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd2.jpg' className={style.produceimg}/>
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd2.jpg' className="produceimg"/>
           </div>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd3.jpg' className={style.produceimg}/>
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd3.jpg' className="produceimg"/>
           </div>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd4.jpg' className={style.produceimg}/>
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd4.jpg' className="produceimg"/>
           </div>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd5.jpg' className={style.produceimg}/>
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd5.jpg' className="produceimg"/>
           </div>
-          <div className={style.produce}>
-            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd6.jpg' className={style.produceimg}/>
+          <div className="produce">
+            <img src='http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/pd6.jpg' className="produceimg"/>
           </div>
         </div>
-        <div className={style.line}></div>
-        <div className={style.banner}>
-          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/ba1.jpg" className={style.bannerimg} />
+        <div className="line"></div>
+        <div className="banner">
+          <img src="http://www.17sucai.com/preview/10221/2017-01-22/azenui/images/img/ba1.jpg" className="bannerimg" />
         </div>
       </div>
     )

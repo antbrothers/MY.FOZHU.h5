@@ -1,3 +1,37 @@
-.banermanager {
+#banner.banermanager {
+  width: 1000px;
+  margin: 0 auto;
+}
+#banner .ant-carousel .slick-slide {
+  text-align: center;
+  height: 300px;
+  line-height: 300px;
+  background: #364d79;
+  overflow: hidden;
+}
 
+#banner .ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+#banner .add-title {
+  font-size: 18px;
+  width: 100%;
+  background-color: #005683 !important;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+}
+#banner .right-icon {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  align-items: center;
+  padding-right: 10px;
+}
+#banner .anticon {
+  margin-right: 10px;
+  cursor: pointer;
 }
