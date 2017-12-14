@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {Upload, Icon, message, Carousel, Modal, Button} from 'antd'
 import Style from '../Scss/banerManage.scss'
+import * as Tool from '../../../../Util/HelpTool'
 
 export default class banner extends Component {
   constructor(props) {
@@ -40,12 +41,14 @@ export default class banner extends Component {
       bannerPic: {
         previewVisible: false,
         previewImage: '',
-        fileList: [{
-          uid: -1,
-          name: 'xxx.png',
-          status: 'done',
-          url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
-        }]
+        fileList: [
+          {
+            uid: -1,
+            name: 'xxx.png',
+            status: 'done',
+            url: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+          }
+        ]
       }
 
     }
@@ -70,21 +73,41 @@ export default class banner extends Component {
     this.setState({bannerModal})
   }
 
-
-
+  /**
+   * 图片预览
+   */
   handlePreview = (file) => {
     var bannerPic = {...this.state.bannerPic}
     bannerPic.previewImage = file.url || file.thumbUrl
     bannerPic.previewVisible = true
     this.setState({bannerPic})
   }
-  handleChange = ({ fileList }) => this.setState({ fileList })
+  /**
+   * 上传图片回调
+   */
+  handleChange = (fileObj) => {
+   if (fileObj.file.status == 'done') {
+     var bannerPic = {}
+     bannerPic.fileList = Tool.megerObj.extend(this.state.bannerPic.fileList, fileObj.fileList, true)
+     this.setState({bannerPic})
+   }
+  }
+  /**
+   * 关闭图片预览窗口
+   */
   handlePicCancel = () => {
     var bannerPic = {...this.state.bannerPic}
     bannerPic.previewVisible = false
     this.setState({bannerPic})
   }
+  /**
+   * 删除图片
+   */
+  handleRemove = (file) => {
+    console.log(file.response.data.id)
 
+
+  }
   render() {
     const {previewVisible, previewImage, fileList} = this.state.bannerPic
     const uploadButton = (
@@ -127,13 +150,17 @@ export default class banner extends Component {
         >
           <div className="clearfix">
             <Upload
-              action="//jsonplaceholder.typicode.com/posts/"
+              action="/advert/testFileInsert"
               listType="picture-card"
-              fileList={fileList}
+              defaultFileList={fileList}
               onPreview={this.handlePreview}
               onChange={this.handleChange}
+              onRemove = {this.handleRemove}
             >
-              {fileList.length >= 3 ? null : uploadButton}
+             {/* {fileList.length >= 3 ? null : uploadButton}*/}
+              {
+                uploadButton
+              }
             </Upload>
             <Modal visible={previewVisible} footer={null} onCancel={this.handlePicCancel}>
               <img alt="example" style={{ width: '100%' }} src={previewImage} />
