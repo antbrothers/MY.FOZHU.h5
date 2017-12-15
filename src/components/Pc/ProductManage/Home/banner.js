@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import * as M from 'actions/Banner'
 import {Upload, Icon, message, Carousel, Modal, Button} from 'antd'
 import Style from '../Scss/banerManage.scss'
 import * as Tool from '../../../../Util/HelpTool'
 
-export default class banner extends Component {
+class banner extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -105,11 +107,12 @@ export default class banner extends Component {
    */
   handleRemove = (file) => {
     console.log(file.response.data.id)
-
-
+    this.props.getBannerList(file.response.data.id)
   }
   render() {
     const {previewVisible, previewImage, fileList} = this.state.bannerPic
+    // const {dataGrid}  = this.props.banner
+    console.log('日志: this.props.banner =>', this.props)
     const uploadButton = (
       <div>
         <Icon type="plus" />
@@ -171,3 +174,5 @@ export default class banner extends Component {
     )
   }
 }
+export default connect((state) => ({dataGrid: state.banner}), M)(banner);
+

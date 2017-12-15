@@ -23,42 +23,15 @@ const devConfig = {
       },
       {
         test: /\.scss$/,
-        // use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
-        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!sass-loader!postcss-loader'
-/*        use:[
-          require.resolve('style-loader'),
-          {
-            loader: require.resolve('css-loader'),
-            options: {
-              importLoaders: 1,
-              modules: true,
-              localIdentName: '[name]__[local]'
-            }
-          },
-          {
-            loader: require.resolve('postcss-loader'),
-            options: {
-              ident: 'postcss',
-              plugins: () => [
-                require('postcss-flexbugs-fixes'),
-                require('autoprefixer')({
-                  browsers: [
-                    '>1%',
-                    'last 4 versions',
-                    'Firefox ESR',
-                    'not ie < 9', // React doesn't support IE8 anyway
-                  ],
-                  flexbox: 'no-2009',
-                })
-              ]
-            }
-          }
-        ]*/
+        use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
+        // scss 模块化
+        // loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!sass-loader!postcss-loader'
       },
       {
         test: /\.less$/,
-        loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!less-loader!postcss-loader'
-        // use: ["style-loader", "css-loader", "less-loader", "postcss-loader",],
+        // less 模块化
+        // loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]!less-loader!postcss-loader'
+        use: ["style-loader", "css-loader", "less-loader", "postcss-loader",],
       }
 
     ]
@@ -66,11 +39,16 @@ const devConfig = {
   devServer: {
     contentBase: path.join(__dirname, './dist'),
     historyApiFallback: true,
-    host: '192.168.31.174',
+    host: '0.0.0.0',
     port: '8084',
     proxy: {
       '/familyweb/api/LiveStatistic/GetFamilyDetail': {
         target: 'http://langke-qas.lvb.eastmoney.com/',
+        changeOrigin: true,
+        secure: false
+      },
+      '/advert': {
+        target: 'http://localhost:8081/',
         changeOrigin: true,
         secure: false
       }
