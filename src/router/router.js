@@ -13,6 +13,7 @@ import PcLayout from '../components/Pc/Menu'
 import useList from 'bundle-loader?lazy&name=useList!components/Pc/UseManage/list'
 import PcProductManageIndex from 'bundle-loader?lazy&name=productmanageindex!components/Pc/ProductManage/index'
 import PcProducManageHome from 'bundle-loader?lazy&name=prudectmangehome!components/Pc/ProductManage/home'
+import CompanyInfo from 'bundle-loader?lazy&name=companyinfo!pages/Company/Index'
 
 // 按需加载 组件
 const createComponent = (component) => () => (
@@ -41,6 +42,7 @@ export default () => (
         </PcLayout>
       }>
       </Route>
+      <Route path="/companyinfo" component={createComponent(CompanyInfo)}/>
     </Switch>
   </div>
 );

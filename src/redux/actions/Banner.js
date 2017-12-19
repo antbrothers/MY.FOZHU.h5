@@ -1,31 +1,17 @@
-export const GET_BANNER_LIST_REQUEST = "GET_BANNER_LIST_REQUEST"
-export const GET_BANNER_LIST_SUCCESS = "GET_BANNER_LIST_SUCCESS"
-export const GET_BANNER_LIST_FAIL =  "GET_BANNER_LIST_FAIL"
-
-
+import {GET_DATA_REQUEST, GET_DATA_FAIL, GET_DELETEADVERTPIC_SUCCESS, GET_ADVERTPICLIST_SUCCESS} from './ActionTypes'
 var Banner = {
-  getBannerList: function (id) {
+  deleteAdvertPicById: function (id) {
     return {
-      types: [GET_BANNER_LIST_REQUEST, GET_BANNER_LIST_SUCCESS, GET_BANNER_LIST_FAIL],
+      types: [GET_DATA_REQUEST, GET_DELETEADVERTPIC_SUCCESS, GET_DATA_FAIL],
       promise: client => client.get('/advert/deleteAdvertPicById/'+id)
+    }
+  },
+  getAdvertPicList: function (type) {
+    return {
+      types: [GET_DATA_REQUEST, GET_ADVERTPICLIST_SUCCESS, GET_DATA_FAIL],
+      promise: client => client.get('/advert/getAvertPitureByType/'+type)
     }
   }
 }
 module.exports = Banner
 
-
-/*
-export function Banner() {
-  /!*return {
-    getBannerList: function (id) {
-      return {
-        types: [GET_BANNER_LIST_REQUEST, GET_BANNER_LIST_SUCCESS, GET_BANNER_LIST_FAIL],
-        promise: client => client.get('/advert/deleteAdvertPicById/'+id)
-      }
-    }
-  }*!/
-  return {
-    types: [GET_BANNER_LIST_REQUEST, GET_BANNER_LIST_SUCCESS, GET_BANNER_LIST_FAIL],
-    promise: client => client.get('/advert/deleteAdvertPicById/'+id)
-  }
-}*/
