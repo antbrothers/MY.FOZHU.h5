@@ -8,7 +8,7 @@ module.exports = {
          remPrecision: 6,
          forcePxComment:'!px',
          keepComment:'!no',
-         exclude: /node_modules/
+         exclude: /(node_modules)|(static)/g
        }),
        require('postcss-cssnext')
    ]

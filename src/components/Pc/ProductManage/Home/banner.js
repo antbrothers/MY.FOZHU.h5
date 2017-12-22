@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import * as M from 'actions/Banner'
 import {Upload, Icon, message, Carousel, Modal, Button} from 'antd'
-import Style from '../Scss/banerManage.scss'
+import '../Scss/banerManage.scss'
 require('../Scss/banerManage.scss')
 import * as Tool from '../../../../Util/HelpTool'
 
